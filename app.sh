@@ -5,13 +5,13 @@ ENDCOLOR="\e[0m"
 add_a_thing () {
 	clear
 	echo "Write a name:"
-	read name_spent
+	read name_expense
 	echo "Write a cost:"
 	read cost
 	time=`(date)`
-	echo "$name_spent for $cost roubles from $time" >> data/moneylist
+	echo "$name_expense for $cost roubles from $time" >> data/moneylist
 	clear
-	echo "${BOLDGREEN}$name_spent${ENDCOLOR} was succefully added to the list"
+	echo "${BOLDGREEN}$name_expense${ENDCOLOR} was succefully added to the list"
 }
 
 show_a_list () {
@@ -49,8 +49,3 @@ case "$choice" in
 	"2"	) show_a_list;;
 	"3"	) remove_a_thing;;
 esac
-
-#todo
-#общий подсчет за месяц
-#удаление выбранной строчки в файле
-#общее количество денег
