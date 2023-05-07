@@ -2,6 +2,15 @@ GREEN="\e[32"
 BOLDGREEN="\e[1;${GREEN}m"
 ENDCOLOR="\e[0m"
 
+DIR="data/"
+if [ -d "$DIR" ]; then
+  # Take action if $DIR exists. #
+  echo "Loading ${DIR}..."
+else
+  mkdir data/
+  echo "Creating ${DIR}"
+fi
+
 add_a_thing () {
 	clear
 	echo "Write a name:"
