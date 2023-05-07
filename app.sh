@@ -38,7 +38,7 @@ remove_a_thing () {
 	show_a_list
 	echo "Type a line to remove: "
 	read number_line
-#не работает пока что	sed -i "/${number_line}/d" moneylist
+	sed -i "${number_line}d" data/moneylist
 }
 
 clear
