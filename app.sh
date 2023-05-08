@@ -49,7 +49,6 @@ Choose what do you want: \n
 1) Add a thing
 2) Show a list
 3) Remove a thing
-4) Wallet settings
 "
 
 read choice
