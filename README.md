@@ -6,4 +6,3 @@
 - Removing expenses
 ## TODO
 - calculate all expenses  for a month
-- add a wallet 

@@ -29,7 +29,7 @@ show_a_list () {
 	while read y
 	do 
 		counter=`expr $counter + 1`
-		echo "$counter $y"
+		echo "$counter | $y"
 	done < data/moneylist
 }
 
@@ -49,6 +49,7 @@ Choose what do you want: \n
 1) Add a thing
 2) Show a list
 3) Remove a thing
+4) Wallet settings
 "
 
 read choice
@@ -57,4 +58,5 @@ case "$choice" in
 	"1"	) add_a_thing;;
 	"2"	) show_a_list;;
 	"3"	) remove_a_thing;;
+	"4"	) calculate;;
 esac
