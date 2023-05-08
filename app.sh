@@ -1,7 +1,3 @@
-GREEN="\e[32"
-BOLDGREEN="\e[1;${GREEN}m"
-ENDCOLOR="\e[0m"
-
 DIR="data/"
 if [ -d "$DIR" ]; then
   # Take action if $DIR exists. #
@@ -20,7 +16,7 @@ add_a_thing () {
 	time=`(date)`
 	echo "$name_expense for $cost roubles from $time" >> data/moneylist
 	clear
-	echo "${BOLDGREEN}$name_expense${ENDCOLOR} was succefully added to the list"
+	echo -e "\033[32m$name_expense\033[0m was succefully added to the list"
 }
 
 show_a_list () {
@@ -39,16 +35,17 @@ remove_a_thing () {
 	echo "Type a line to remove: "
 	read number_line
 	sed -i "${number_line}d" data/moneylist
+	echo -e "Successfully \033[31mdeleted\033[0m"
 }
 
 clear
 
-echo "
+echo -e "
 Choose what do you want: \n
 -------------------------------------\n
-1) Add a thing
-2) Show a list
-3) Remove a thing
+1) Add a thing \n
+2) Show a list \n
+3) Remove a thing \n
 "
 
 read choice
