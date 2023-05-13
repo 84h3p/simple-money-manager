@@ -1,3 +1,5 @@
+#!/bin/bash
+
 DIR="data/"
 if [ -d "$DIR" ]; then
   # Take action if $DIR exists. #
@@ -35,6 +37,7 @@ remove_a_thing () {
 	echo "Type a line to remove: "
 	read number_line
 	sed -i "${number_line}d" data/moneylist
+	clear
 	echo -e "Successfully \033[31mdeleted\033[0m"
 }
 
