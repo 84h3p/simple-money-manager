@@ -27,7 +27,7 @@ show_a_list () {
 	while read y
 	do 
 		counter=`expr $counter + 1`
-		echo "$counter | $y"
+		echo -e "\033[33m$counter\033[0m | $y"
 	done < data/moneylist
 }
 
