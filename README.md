@@ -1,7 +1,7 @@
 # simple-money-manager
 
 ## Features
-- Adding thing
+- Adding expenses
 - Showing list
 - Removing expenses
 ## TODO
