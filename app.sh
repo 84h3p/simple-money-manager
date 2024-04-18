@@ -53,6 +53,7 @@ Choose what do you want: \n
 
 read choice
 
+# Choose an action
 case "$choice" in
 	"1"	) add_a_thing;;
 	"2"	) show_a_list;;
